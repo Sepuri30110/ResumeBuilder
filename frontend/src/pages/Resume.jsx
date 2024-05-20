@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { SimpleTreeView } from '@mui/x-tree-view/SimpleTreeView';
 import { TreeItem } from '@mui/x-tree-view/TreeItem';
 import Input from '@mui/material/Input';
-import { Card } from "@mui/material";
+import { Button, Card } from "@mui/material";
 import Box from "@mui/joy/Box";
 import Radio from "@mui/joy/Radio";
 import RadioGroup from "@mui/joy/RadioGroup";
@@ -49,6 +49,16 @@ function Resume() {
         cource: '',
     })
 
+    var lang = []
+    const otherLang = ""
+    const temp = ""
+    const setLang = (e) => {
+        console.log(e.target.value)
+        lang.push(e.target.value)
+    }
+
+    var techSkills = ["C", "C++", "Java", "JS", "React", "HTML"]
+
     const handleChangePersonalDetails = (e) => {
         console.log(e)
         const { name, value } = e.target;
@@ -74,7 +84,7 @@ function Resume() {
             >
                 <div>
                     <SimpleTreeView>
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
                             <TreeItem itemId="1" label="PersonalDetails" >
                                 <div style={{ display: "flex", flexDirection: "column", padding: "5px" }}>
                                     <div style={{ display: "flex", flexDirection: "column", width: "90%" }}>
@@ -116,21 +126,18 @@ function Resume() {
                                 </div>
                             </TreeItem>
                         </Card>
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
                             <TreeItem itemId="2" label="Language">
                                 <div style={{ display: "flex", flexDirection: "column", padding: "5px" }}>
                                     <FormGroup>
-                                        <FormControlLabel control={<Checkbox />} label="English" />
-                                        <FormControlLabel control={<Checkbox />} label="Hindi" />
-                                        <FormControlLabel control={<Checkbox />} label="Telugu" />
-                                        <Input
-                                            placeholder="Others"
-                                        ></Input>
+                                        <FormControlLabel control={<Checkbox />} value="English" onChange={setLang} label="English" />
+                                        <FormControlLabel control={<Checkbox />} value="Hindi" onChange={setLang} label="Hindi" />
+                                        <FormControlLabel control={<Checkbox />} value="Telugu" onChange={setLang} label="Telugu" />
                                     </FormGroup>
                                 </div>
                             </TreeItem>
                         </Card>
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
                             <TreeItem itemId="3" label="Edudation">
                                 <div style={{ display: "flex", flexDirection: "column", padding: "5px" }}>
                                     <TreeItem itemId="2-1" label="Secondary Schooling">
@@ -222,46 +229,54 @@ function Resume() {
                                 </div>
                             </TreeItem>
                         </Card>
-                        
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
                             <TreeItem itemId="4" label="Technical Skills">
+                                <div>
+                                    <FormGroup>
+                                        {
+                                            techSkills.map((e) => {
+                                                return (
+                                                    <FormControlLabel control={<Checkbox />} label={e} />
+                                                )
+                                            })
+                                        }
+                                    </FormGroup>
+                                    <Button>Add another</Button>
+                                </div>
+                            </TreeItem>
+                        </Card>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
+                            <TreeItem itemId="5" label="Expertise">
                                 <div>
 
                                 </div>
                             </TreeItem>
                         </Card>
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
-                            <TreeItem itemId="5" label="Expertise">
-                                <div>
-                                    
-                                </div>
-                            </TreeItem>
-                        </Card>
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
                             <TreeItem itemId="6" label="Certification">
                                 <div>
-                                    
+
                                 </div>
                             </TreeItem>
                         </Card>
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
                             <TreeItem itemId="7" label="Projects">
                                 <div>
-                                    
+
                                 </div>
                             </TreeItem>
                         </Card>
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
                             <TreeItem itemId="8" label="Achievements">
                                 <div>
-                                    
+
                                 </div>
                             </TreeItem>
                         </Card>
-                        <Card className="m-2 mb-3" style={{width:"115%"}}>
+                        <Card className="m-2 mb-3" style={{ width: "115%" }}>
                             <TreeItem itemId="9" label="Extra Curricular Activities">
                                 <div>
-                                    
+
                                 </div>
                             </TreeItem>
                         </Card>

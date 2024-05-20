@@ -29,6 +29,7 @@ function LoginPage() {
       .then(res => {
         sessionStorage.setItem('user', JSON.stringify(res.data))
         console.log(res.data)
+        navigate("/")
       })
       .catch(err => {
         console.log(err)

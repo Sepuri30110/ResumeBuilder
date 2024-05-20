@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import SignUpPage from "./pages/SignupPage";
 import LoginPage from './pages/LoginPage'
 import NavBar from './components/NavBar'
+import Resume from "./pages/Resume";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import './index.css';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" />
           <Route path="/contact" />
           <Route path="/templates" />
+          <Route path="/resume" element={<Resume/>}/>
         </Routes>
       </BrowserRouter>
     </>

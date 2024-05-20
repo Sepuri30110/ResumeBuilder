@@ -33,7 +33,7 @@ const LandingPage = () => {
                                     </h2>
                                     <div className="mt-3">
                                         <div className="btn-get-started ptr" onClick={() => {
-                                            handleNavigation('/templates')
+                                            handleNavigation('/resume')
                                             console.log("Templates")
                                         }}>
                                             Get Started

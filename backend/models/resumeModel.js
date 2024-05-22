@@ -17,9 +17,14 @@ const resumeSchema = new mongoose.Schema({
     certificate : Array,
     projects : Array,
     achievements : Array,
-    ecs : Array,
+    eca : Array,
 
 },{ timestamps: true })
+
+resumeSchema.statics.postData = async function(userName,pd,sec,inter,grad,lang,choosenTechSkills,expertise,certificate,projects,achievements,eca){
+    const resume = await this.create(userName,pd,sec,inter,grad,lang,choosenTechSkills,expertise,certificate,projects,achievements,eca)
+    return resume
+}
 
 const ResumeModel = mongoose.model("resumes",resumeSchema)
 

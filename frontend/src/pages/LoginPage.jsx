@@ -25,7 +25,7 @@ function LoginPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    axios.post('http://localhost:3001/api/user/login', { userName: credentials.username, password: credentials.password, confirmPassword: credentials.confirmPassword })
+    axios.post('http://localhost:3001/api/user/login', { userName: credentials.username, password: credentials.password})
       .then(res => {
         sessionStorage.setItem('user', JSON.stringify(res.data))
         console.log(res.data)

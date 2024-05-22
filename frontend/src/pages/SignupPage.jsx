@@ -26,7 +26,7 @@ function SignUpPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    axios.post('http://localhost:3001/api/user/signup', { userName: credentials.username, password: credentials.password, confirmPassword: credentials.confirmPassword })
+    axios.post('http://localhost:3001/api/user/signUp', { userName: credentials.username, password: credentials.password, confirmPassword: credentials.confirmPassword })
       .then(res => {
         console.log(res)
       })
@@ -43,7 +43,7 @@ function SignUpPage() {
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <h1 style={{ alignSelf: 'center' }}>SignUp</h1>
           <form onSubmit={handleSubmit}>
-            <div style={{display:"flex",flexDirection:"column"}}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ marginBottom: '5px' }}>
                 <h3>Username</h3>
                 <Input

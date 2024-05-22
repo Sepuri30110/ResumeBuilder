@@ -7,7 +7,7 @@ const signupUser = async (req,res) => {
         
         const user = await User.signup(userName,password,confirmPassword)
         
-        res.status(200).json({user})
+        res.status(200).json({userName})
 
     } catch(err) {
         console.log(err.message)
@@ -21,8 +21,8 @@ const loginUser = async (req,res) => {
 
         const user = await User.login(userName,password)
         console.log(user)
-        const username = user
-        res.status(200).json({username})
+        res.status(200).json(user)
+            
 
     } catch(err) {
         console.log(err.message)

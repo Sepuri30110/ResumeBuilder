@@ -7,14 +7,13 @@ const app = express()
 const PORT = 3001
 
 
+app.use(cors())
 app.use(express.json())
-app.use(cors({ 
-    origin: 'http://localhost:3000', // Allow requests from this origin
-    credentials: true // Allow cookies to be sent along with the request
-}));
-
-mongoose.connect('mongodb://127.0.0.1:27017/RTFP')
 app.use('/api/user',userRoutes)
+
+
+mongoose.connect('mongodb://127.0.0.1:27017/resume');
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)

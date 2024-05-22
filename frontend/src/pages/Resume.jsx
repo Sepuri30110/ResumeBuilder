@@ -23,7 +23,7 @@ function Resume() {
 
     const handleSubmit = () => {
         // console.log(personalDetails)
-        axios.post('http://localhost:3001/api/user/resume', { userName, pd, sec, inter, grad, })
+        axios.post('http://localhost:3001/api/user/resume', { userName, pd, sec, inter, grad, lang,choosenTechSkills,expertise,certificate,projects,achievements,ECA})
             .then((res) => {
                 console.log(res.data)
             })
@@ -38,6 +38,13 @@ function Resume() {
     }
 
     const navigate = useNavigate()
+
+    //pd-personalDetails
+    //sec-secondarySchool
+    //inter-intermediate
+    //grad-graduation
+    //lang-languages
+    //choosenTechSkills - techSkills
 
     const pd = []
     const sec = []

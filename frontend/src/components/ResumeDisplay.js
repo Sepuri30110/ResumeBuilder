@@ -1,80 +1,120 @@
 import React from 'react';
-import "../style.css"
 
-function ResumeDisplay() {
+function Resume() {
   return (
-    <div className="container">
-      <div className="box-left">
-        <div className="profile">
-          <img src="img.png" alt="Profile" />
+    <div style={{ width: '800px', height: 'auto', display: 'flex', margin: '50px auto' }}>
+      <div style={{ width: '280px', backgroundColor: 'rgb(245, 233, 238)' }}>
+        <div style={{ width: '75%', height: '200px', backgroundColor: 'rgb(37, 230, 11)', margin: '0 auto' }}>
+          <img src="img.png" alt="Profile" style={{ width: '100%', height: '100%' }} />
         </div>
-        <div className="content">
-          <div className="resume-item">
-            <div className="title">
-              <p className="bold">Contact</p>
-              <hr />
-              <p className="regular">Phone:<br />123-456-7890</p>
-              <p className="bold">Email<br />hello@reallygreatsite.com</p>
-              <p className="bold">Address<br />123 Anywhere St., Any City</p>
+        <div style={{ padding: '0 25px' }}>
+          <div style={{ padding: '25px 0', borderBottom: '2px solid chocolate' }}>
+            <div style={{ marginBottom: '20px' }}>
+              <p style={{ fontWeight: 'bold' }}>Contact</p>
+              <hr style={{ border: 'none', height: '2px', backgroundColor: 'red' }} />
+              <p>+123-456-7890</p>
+              <p style={{ fontWeight: 'bold' }}>hello@reallygreatsite.com</p>
+              <p style={{ fontWeight: 'bold' }}>123 Anywhere St., Any City</p>
             </div>
-            <div className="title">
-              <p className="bold">Education</p>
-              <hr />
-              <p className="regular">2008<br />Enter Your Degree<br />University/College</p>
-              <p className="regular">2008<br />Enter Your Degree<br />University/College</p>
-            </div>
-            <div className="title">
-              <p className="bold">Expertise</p>
-              <hr />
-              <ul>
-                <li>UI/UX</li>
-                <li>Visual Design</li>
-                <li>Wireframes</li>
-                <li>Storyboards</li>
-                <li>User Flows</li>
-                <li>Process Flows</li>
-              </ul>
-            </div>
-            <div className="title">
-              <p className="bold">Language</p>
-              <hr />
+            <div style={{ marginBottom: '20px' }}>
+              <p style={{ fontWeight: 'bold' }}>Language</p>
+              <hr style={{ border: 'none', height: '2px', backgroundColor: 'red' }} />
               <ul>
                 <li>English</li>
-                <li>Spanish</li>
+                <li>Hindi</li>
+                <li>Telugu</li>
+              </ul>
+            </div>
+            <div style={{ marginBottom: '20px' }}>
+              <p style={{ fontWeight: 'bold' }}>Technical Skills</p>
+              <hr style={{ border: 'none', height: '2px', backgroundColor: 'red' }} />
+              <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C Lang</li>
+                <li>Adobe Premier Pro</li>
+                <li>Adobe Photoshop</li>
+                <li>PC Hardware</li>
+                <li>MS Office</li>
+              </ul>
+            </div>
+            <div style={{ marginBottom: '20px' }}>
+              <p style={{ fontWeight: 'bold' }}>Expertise</p>
+              <hr style={{ border: 'none', height: '2px', backgroundColor: 'red' }} />
+              <ul>
+                <li>Smart Worker</li>
+                <li>Creativity</li>
+                <li>Time Management</li>
+                <li>Interpersonal Skills</li>
+                <li>Critical Thinking</li>
+                <li>Leadership</li>
+              </ul>
+            </div>
+            <div style={{ marginBottom: '20px' }}>
+              <p style={{ fontWeight: 'bold' }}>Certification</p>
+              <hr style={{ border: 'none', height: '2px', backgroundColor: 'red' }} />
+              <ul>
+                <li>VLSI (Very Large Scale Integration)</li>
+                <li>Digital Image Processing</li>
+                <li>MS Office</li>
+                <li>PC Hardware</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div className="box-right">
-        <div className="resume-item">
-          <div className="title">
-            <h1>Mariana Anderson</h1>
-            <h3>Marketing Manager</h3>
-            <p className="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra in lorem at laoreet. Donec hendrerit libero eget est tempor, quis tempus arcu elementum. In elementum elit at dui tristique feugiat. Mauris convallis, mi at mattis malesuada, neque nulla volutpat dolor, hendrerit faucibus eros nibh ut nunc.</p>
+      <div style={{ width: '520px', backgroundColor: 'aliceblue', padding: '25px', alignItems: 'center' }}>
+        <div style={{ padding: '25px 0', borderBottom: '2px solid chocolate' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <h1>GIREESH RAM SEPURI</h1>
+            <h4>ELECTRONICS AND COMMUNICATION ENGINEER</h4>
           </div>
-          <div className="title">
-            <h2>Experience</h2>
-            <hr />
+          <div style={{ marginBottom: '2px' }}>
+            <h2>Education</h2>
+            <hr style={{ border: 'none', height: '2px', backgroundColor: 'red' }} />
           </div>
           <ul>
             <li>
-              <div>2019 - 2022</div>
-              <div>Company Name | 123 Anywhere St., Any City</div>
-              <h2>Job Position Here</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra in lorem at laoreet. Donec hendrerit libero eget est tempor, quis tempus arcu elementum. In elementum elit at dui tristique feugiat. Mauris convallis, mi at mattis malesuada, neque nulla volutpat dolor, hendrerit faucibus eros nibh ut nunc. Proin luctus urna id nunc sagittis dignissim. Sed in libero sed libero dictum dapibus. Vivamus fermentum est eget lorem aliquet, vel tempus metus dignissim. Donec risus arcu, tristique et sollicitudin blandit, iaculis ut nisl. Integer rutrum ultricies fringilla.</p>
+              <h3>2024<br />
+                Guru Nanak Institutions Technical Campus, Ibrahimpatnam<br />
+                Bachelor of Technology Electronics & Communication Engineering<br />
+                70.0%</h3>
+              <br />
+              <h3>2020<br />
+                Sri Gayatri Junior College, RK puram<br />
+                Intermediate Education<br />
+                MPC<br />
+                82.7%</h3>
+              <br />
+              <h3>2018<br />
+                Dilsukhnagar Public School, RK puram<br />
+                Secondary School Certificate<br />
+                97.0%</h3>
             </li>
             <li>
-              <div>2017 - 2019</div>
-              <div>Company Name | 123 Anywhere St., Any City</div>
-              <h2>Job Position Here</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra in lorem at laoreet. Donec hendrerit libero eget est tempor, quis tempus arcu elementum. In elementum elit at dui tristique feugiat. Mauris convallis, mi at mattis malesuada, neque nulla volutpat dolor, hendrerit faucibus eros nibh ut nunc. Proin luctus urna id nunc sagittis dignissim. Sed in libero sed libero dictum dapibus. Vivamus fermentum est eget lorem aliquet, vel tempus metus dignissim. Donec risus arcu, tristique et sollicitudin blandit, iaculis ut nisl. Integer rutrum ultricies fringilla.</p>
-            </li>
-            <li>
-              <div>2015 - 2017</div>
-              <div>Company Name | 123 Anywhere St., Any City</div>
-              <h2>Job Position Here</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra in lorem at laoreet. Donec hendrerit libero eget est tempor, quis tempus arcu elementum. In elementum elit at dui tristique feugiat. Mauris convallis, mi at mattis malesuada, neque nulla volutpat dolor, hendrerit faucibus eros nibh ut nunc. Proin luctus urna id nunc sagittis dignissim. Sed in libero sed libero dictum dapibus. Vivamus fermentum est eget lorem aliquet, vel tempus metus dignissim. Donec risus arcu, tristique et sollicitudin blandit, iaculis ut nisl. Integer rutrum ultricies fringilla.</p>
+              <div style={{ marginBottom: '2px' }}>
+                <h2 style={{ fontWeight: 'bold' }}>Projects</h2>
+                <hr style={{ border: 'none', height: '1.5px', backgroundColor: 'brown' }} />
+              </div>
+              <h3>2020<br />
+                STYLUS PEN<br />
+                Science Fair Model Presentation - GNITC</h3>
+              <div>
+                <h3>Achievements</h3>
+                <hr style={{ border: 'none', height: '1.5px', backgroundColor: 'brown' }} />
+                <ul>
+                  <li>STYLUS PEN<br />
+                    Science Fair Model Presentation<br />
+                    Guru Nanak Institution Technical Campus, Ibrahimpatnam<br />
+                    2020
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>Extra Curricular Activities</h3>
+                <hr style={{ border: 'none', height: '1.5px', backgroundColor: 'brown' }} />
+                <p>Worked as organizing member for our college annual fest “BRUMOUS FIESTA-2022” & “BRUMOUS FIESTA-2024”.</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -83,4 +123,4 @@ function ResumeDisplay() {
   );
 }
 
-export default ResumeDisplay;
+export default Resume;

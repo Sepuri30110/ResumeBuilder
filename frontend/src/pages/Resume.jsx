@@ -12,20 +12,29 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import ResumeDisplay from "../components/ResumeDisplay";
+import { useRef } from "react";
 
 function Resume() {
 
-    const { username, password } = JSON.parse(sessionStorage.getItem("user"))
+    const pdf = useRef()
+
+    const { userName, password } = JSON.parse(sessionStorage.getItem("user"))
 
     const handleSubmit = () => {
         // console.log(personalDetails)
-        axios.post('http://localhost:3001/api/user/resume', { userName: username, personalDetails: personalDetails })
+        axios.post('http://localhost:3001/api/user/resume', { userName, pd, sec, inter, grad, })
             .then((res) => {
                 console.log(res.data)
             })
             .catch((err) => {
                 console.log("Error", err)
             })
+    }
+
+    const handleDownload = () => {
+        //   const content = pdf.current
+        window.html2pdf(pdf.current).save();
     }
 
     const navigate = useNavigate()
@@ -281,8 +290,10 @@ function Resume() {
 
     return (
         <div style={{ display: 'flex' }}>
-            <div>
-
+            <div ref={pdf}>
+                <Box>
+                    <ResumeDisplay />
+                </Box>
             </div>
             <Box
                 height={500}
@@ -291,6 +302,7 @@ function Resume() {
                 m={1}
                 sx={{ border: '2px solid grey' }}
                 overflow="scroll"
+                style={{ marginLeft: "100px" }}
             >
                 <div>
                     <SimpleTreeView style={{ display: "flex", flexDirection: "column" }}>
@@ -539,7 +551,10 @@ function Resume() {
                                 </div>
                             </TreeItem>
                         </Card>
-                        <Button onClick={handleSubmit} style={{ alignSelf: "center" }}>Submit</Button>
+                        <div style={{ display: "flex", alignSelf: "center" }}>
+                            <Button onClick={handleSubmit} style={{ marginLeft: "45px" }}>Submit</Button>
+                            <Button onClick={handleDownload} style={{ marginLeft: "5px" }}>Download</Button>
+                        </div>
                     </SimpleTreeView>
                 </div>
             </Box>
